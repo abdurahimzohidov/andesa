@@ -1,0 +1,217 @@
+.footer{
+    margin-top: 100px;
+    &-top{
+        background: #1648A8;
+        padding: 25px 0;
+        @include media(992){
+            padding: 15px;
+        }
+        &__contact{
+            display: flex;
+            align-items: center;
+            @include media(992){
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+        }
+        &__title{
+            font-family: $mont;
+            font-weight: 500;
+            font-size: 32px;
+            color: #fff;
+            margin-right: 5%;
+            @include media(992){
+                margin: 0;
+            }
+        }
+        &__mail{
+            width: 280px;
+            height: 45px;
+            border: 1px solid #E5E5E5;
+            padding: 15px 20px;
+            background: transparent;
+            outline: none;
+            margin-right: 5%;
+            font-family: $mont;
+            font-weight: 500;
+            font-size: 15px;
+            color: #fff;
+
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.8);
+            }
+            @include media(992){
+                margin: 10px 0;
+            }
+        }
+        &__btn{
+            padding: 15px 60px;
+            background: #FFD230;
+            border-radius: 24px;
+            font-family: $mont;
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+            border: none;
+            @include media(992){
+                margin: 0;
+            }
+        }
+        &__agree{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 18px;
+        }
+        &__check{
+            width: 15px;
+            height: 15px;
+            border: 1px solid #477ADA;
+            margin-right: 10px;
+        }
+        &__text{
+            font-family: $mont;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            color: #fff;
+            width: 460px;
+        }
+    }
+}
+.footer{
+    &-content{
+        padding: 80px;
+        background: #F3F3F3;
+        @include media(576){
+            padding: 10px;
+        }
+        & .container{
+            display: flex;
+            justify-content: space-between;
+            @include media(992){
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @include media(768){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include media(400){
+                display: grid;
+                grid-template-columns:1fr;
+            }
+        }
+    }
+    &__logo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: max-content;
+    }
+    &__apps{
+        display: flex;
+        align-items: center;
+        margin: 28px 0;
+        @include media(768){
+            margin: 10px 0;
+        }
+    }
+    &__telegram{
+        margin-right: 35px;
+        & i{
+            font-size: 20px;
+            color: #969696;
+            &::after{
+                content:"\f2c6";
+            }
+        }
+    }
+    &__whatsapp{
+
+        & i{
+            font-size: 20px;
+            color: #969696;
+            &::after{
+                content:"\f232";
+            }
+        }
+    }
+    &__created{
+        width: 80%;
+        font-family: $mont;
+        font-weight: 500;
+        font-size: 12px;
+        color: $black;
+    }
+    &__contact{
+        display: flex;
+        flex-direction: column;
+        width: 170px;
+    }
+    &__contact-link{
+        font-family: $mont;
+        font-weight: 400;
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 25px;
+        @include media(768){
+            margin-bottom: 10px;
+        }
+    }
+    &__nav{
+        width: 100px;
+        display: flex;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+    &__item{
+        margin-bottom: 25px;
+        @include media(768){
+            margin-bottom: 10px;
+        }
+    }
+    &__link{
+        font-family: $mont;
+        font-weight: 400;
+        font-size: 14px;
+        color: $black;
+    }
+    &__location{
+        width: 170px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__tel{
+        font-family: $mont;
+        font-weight: 500;
+        font-size: 16px;
+        color: $black;
+
+        & i{
+            margin-right: 8px;
+            &::after{
+                content: "\f879";
+            }
+        }
+    }
+    &__address{
+        font-family: $mont;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $black;
+        margin: 24px 0;
+        @include media(992){
+            margin: 10px 0;
+        }
+    }
+    &__mail{
+        font-family: $mont;
+        font-weight: 400;
+        font-size: 14px;
+        color: #000;
+    }
+}

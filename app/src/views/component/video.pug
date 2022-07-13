@@ -1,0 +1,23 @@
+section.video
+    .container
+        video(src="./videos/andesa.mp4" poster="./images/andesa.png").video__andesa
+        p.video__speed-text 1x
+        .video__box 
+            .video-top 
+                output.video__start#current 00:00:00
+                .video__duration
+                    .video__progress
+                    .video__progress-ruler
+                output.video__end#duration 00:00:00
+            .video-bottom
+                i.far.video__restart 
+                div.video__icons
+                    i.far.video__prev-speed
+                    i.far.video__prev
+                    i.far.video__play
+                    i.far.video__next
+                    i.far.video__next-speed
+                    .video__volume 
+                        button.far.video__volume-icon.downup
+                        input(type="range" id="volume").video__volume-range
+                i.far.video__screen

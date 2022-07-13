@@ -1,0 +1,126 @@
+.header{
+    padding-top: 23px;
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__tel{
+        &-link{
+            font-family: $mont;
+            font-weight: 500;
+            font-size: 16px;
+            color: $black;
+            @include media(600){
+                display: none;
+            }
+
+        }
+        & i{
+            font-size: 20px;
+            color: black;
+            margin-right: 10px;
+            &::after{
+                content: "\f879";
+            }
+        }
+    }
+    &__user{
+        &-link{
+            @include media(600){
+                display: none;
+            }
+        }
+        & i{
+            font-size: 20px;
+            color: black;
+            margin-right: 10px;
+            &::after{
+                content: "\f007";
+            }
+        }
+    }
+    &__whatsup{
+        font-size: 20px;
+        color: black;
+        &::before{
+            content: "\f232";
+        }
+    }
+    &__telegram{
+        font-size: 20px;
+        color: black;
+        &::before{
+            content: "\f2c6";
+        }
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        @include media(1200){
+            display: none;
+        }
+        &.active{
+            width: 250px;
+            height: 300px;
+            position: absolute;
+            display: block;
+            top: 90px;
+            right: 0;
+            background: #E5E5E5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius:50px;
+            border-bottom-right-radius:50px;
+        }
+    }
+    &__item{
+        margin-right: 50px;
+        &:last-child{
+            margin-right: 0px;
+        }
+        @include media(1200){
+            margin: 3px 0;
+        }
+    }
+    &__link{
+        font-family: $mont;
+        font-weight: 500;
+        font-size: 16px;
+        color: $black;
+        display: block;
+        transition: .3s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+.nav__btn{
+    background: transparent;
+    border: none;
+    display: none;
+    margin-left: auto;
+    position: relative;
+    z-index: 99;
+    @include media(1200){
+        display: block;
+    }
+    &::after{
+        font-size: 35px;
+        color: black;
+        content: "\f0c9";
+    }
+
+    &.active{
+        &::after{
+            content: "\f00d";
+        }
+    }
+}

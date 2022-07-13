@@ -1,0 +1,218 @@
+.video{
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    & .container{
+        border: 3px solid rgba(52, 52, 52, 0.5);
+        box-shadow: 0 0 10px black;
+        border-radius: 30px;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        &:hover .video__box{
+            transform: translateY(0%);
+        }
+        @include media(576){
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    
+    &__andesa{
+        width: 100%;
+        border-radius: 30px;
+        @include media(576){
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    &__box{
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        background: rgb(22, 73, 168);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        transform: translateY(100%);
+        transition: .2s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include media(576){
+            padding: 0 5px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__start{
+        font-family: $mont;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+    }
+    &__duration{
+        flex-grow: 1;
+        height: 6px;
+        background-color: #fff;
+        margin: 0 10px;
+        display: flex;
+        cursor: pointer;
+    }
+    &__progress{
+        height: 100%;
+        width: 0%;
+        background-color: #FFD230;
+
+        &-ruler{
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #FFD230;
+            transform: scale(2.2);
+        }
+    }
+    &__end{
+        font-family: $mont;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    &-bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+
+        & i{
+            padding: 0 10px;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            &:hover{
+                color: #FFD230;
+            }
+            @include media(576){
+                padding: 0 5px;
+            }
+        }
+    }
+    &__speed-text{
+        position: absolute;
+        top: 3%;
+        left: 3%;
+        color: rgb(242, 56, 5);
+        font-size: 30px;
+        font-weight: 700;
+        opacity: 0;
+    }
+    &__prev{
+        
+        &::before{
+            content: "\f0d9";
+        }
+    }
+    &__prev-speed{
+
+        &::before{
+            content: "\f04a";
+        }
+    }
+    &__play{
+
+        &.active{
+            &::after{
+                content: "\f04c";
+                display: block;
+            }
+            &::before{
+                content: "\f04b";
+                display: none;
+            }
+        }
+        &::after{
+            content: "\f04c";
+            display: none;
+        }
+        &::before{
+            content: "\f04b";
+        }
+    }
+    &__next{
+
+        &::before{
+            content: "\f0da";
+        }
+    }
+    &__next-speed{
+
+        &::before{
+            content: "\f04e";
+        }
+    }
+    &__volume{
+        &-icon{
+            width: 25px;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            background: transparent;
+            margin-right: 10px;
+            cursor: pointer;
+            &.mute{
+                &::after{
+                    content: "\f2e2";
+                }
+            }
+            &.off{
+                &::after{
+                    content: "\f6a9";
+                }
+            }
+            &.down{
+                &::after{
+                    content: "\f027";
+                }
+            }
+            &.downup{
+                &::after{
+                    content: "\f6a8";
+                }
+            }
+            &.up{
+                &::after{
+                    content: "\f028";
+                }
+            }
+        }
+        &-range{
+            cursor: pointer;
+            @include media(400){
+                width: 80px;
+            }
+        }
+    }
+    &__restart{
+
+        &::after{
+            content: "\f0e2";
+        }
+    }
+    &__icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__screen{
+        
+        &::after{
+            content: "\f065";
+        }
+    }
+}

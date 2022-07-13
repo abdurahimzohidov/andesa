@@ -1,0 +1,40 @@
+.intro{
+    background: url(../images/intro_bg.png) no-repeat center/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    @include media(768){
+        height: 550px;
+    }
+    @include media(576){
+        height: 500px;
+    }
+    &__title{
+        font-family: $mont;
+        font-weight: 400;
+        font-size: 40px;
+        color: #fff;
+        margin-bottom: 30px;
+        @include media(576){
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+        @include media(400){
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+    }
+    &__text{
+        width: 565px;
+        font-family: $mont;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #fff;
+        margin-bottom: 20px;
+        @include media(600){
+            width: 100%;
+        }
+    }
+}

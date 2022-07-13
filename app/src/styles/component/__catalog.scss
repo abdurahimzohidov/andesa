@@ -1,0 +1,33 @@
+.catalog{
+    margin-top: 80px;
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        @include media(1200){
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+    }
+    &__box{
+        width: 283px;
+        @include media(1200){
+            margin-top: 20px;
+        }
+    }
+    &__img{
+        height: 238px;
+        width: 100%;
+        background:#F3F3F3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__info{
+        font-family: $mont;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        margin-top: 20px;
+        color: $black;
+    }
+}

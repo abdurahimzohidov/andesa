@@ -1,0 +1,8 @@
+$black:#1F2324;
+$mont:'Montserrat';
+
+@mixin media($size) {
+    @media (max-width:#{$size}px) {
+        @content
+    }
+}
